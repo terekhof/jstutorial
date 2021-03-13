@@ -28,6 +28,14 @@ function writeToLog(
 }
 
 function calculateResult (calculationType){
+  if (calculationType !== 'ADD' && 
+      calculationType !== 'SUBTRACT' && 
+      calculationType !== 'MULTIPLY' &&
+      calculationType !== 'DIVIDE'
+  ) {
+    return;
+  }
+
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
   let mathOperator;
@@ -37,6 +45,12 @@ function calculateResult (calculationType){
   } else if (calculationType === 'SUBTRACT') {
     currentResult -= enteredNumber;
     mathOperator = '-';
+  } else if (calculationType === 'MULTIPLY') {
+    currentResult *= enteredNumber;
+    mathOperator = '*';
+  } else if (calculationType === 'DIVIDE') {
+    currentResult /= enteredNumber;
+    mathOperator = '/';
   }
   createWriteLogOutput(mathOperator, initialResult, enteredNumber);
   writeToLog(calculationType, initialResult, enteredNumber, currentResult);
@@ -52,19 +66,11 @@ function subtract() {
 }
 
 function multiply() {
-  const enteredNumber = getUserNumberInput();
-  const initialResult = currentResult;
-  currentResult *= enteredNumber;
-  createWriteLogOutput('*', initialResult, enteredNumber);
-  writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
+  calculateResult('MULTIPLY');
 }
 
 function divide() {
-  const enteredNumber = getUserNumberInput();
-  const initialResult = currentResult;
-  currentResult /= enteredNumber;
-  createWriteLogOutput('/', initialResult, enteredNumber);
-  writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
+  calculateResult('DIVIDE');
 }
 
 
