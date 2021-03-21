@@ -7,11 +7,9 @@ liElement.style.color = 'white';
 
 
 const firstTitle = document.querySelector('title');
-
 firstTitle.innerText = 'Assignment - Solved!';
 
 
 
 const h1 = document.querySelector('h1');
-
 h1.innerText = "Assignment - Solved!";
