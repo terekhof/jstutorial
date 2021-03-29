@@ -73,7 +73,7 @@ prices.forEach((price, idx, prices) => {
 
 console.log(taxAdjustedPrices); */
 
-const prices = [10.99, 5.99, 3.99, 7.95];
+/* const prices = [11, 6, 4, 8 ];
 const tax = 0.19
 
 const taxAdjustedPrices = prices.map((price, idx, prices) => {
@@ -96,3 +96,44 @@ console.log(sortedPrices);
 const filteredArray = prices.filter(price => price > 6);
 
 console.log(filteredArray);
+
+
+const sum = prices.reduce((prevValue, currentValue) => prevValue + currentValue, 0);
+
+console.log(sum)
+
+const data = 'new york;10.99;2000';
+
+const transformedData = data.split(';')
+transformedData[1] = +transformedData[1];
+
+console.log(transformedData);
+
+const nameFragments = ['Max', 'Schwarz'];
+const name = nameFragments.join(' ');
+console.log(name);
+
+
+const copiedNameFragments = [...nameFragments];
+copiedNameFragments.push('Mr');
+console.log(nameFragments, copiedNameFragments);
+
+
+console.log(Math.min(...prices));
+
+const persons = [{name: 'Gleb', age: 23}, {name: 'Georgy', age: 23}];
+const copiedPersons = persons.map(person => ({
+    name: person.name, 
+    age: person.age
+}));
+
+persons.push({name: 'Anna', age: 23});
+persons[0].age = 31;
+
+console.log(copiedPersons, persons); */
+
+const nameData = ['Max', 'Schwarz', 30, 'mr'];
+
+const [ firstName, lastName, ...otherInformation ] = nameData;
+
+console.log(firstName, lastName, otherInformation);
