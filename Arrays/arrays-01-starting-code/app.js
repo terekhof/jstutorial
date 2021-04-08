@@ -131,9 +131,30 @@ const name = nameFragements.join(' ');
 
 console.log(name); */
 
-const str = 'Reverse';
+/* const prices = [20, 40, 60, 30]
 
-const transformedString = str.split('').reverse().join('');
+const nameFragements = ['Max', 'Schwarz'];
+const copiedNameFragments = [...nameFragements];
 
-console.log(transformedString);
+nameFragements.push('Mr');
+
+console.log(nameFragements, copiedNameFragments);
+console.log(Math.min(...prices));
+
+const persons = [{name: 'Max', age: 30}, {name: 'Manuel', age: 31}];
+const copiedPersons = persons.map(person => ({
+  name: person.name,
+  age: person.age
+}));
+
+persons.push({ name: 'Anna', age: 29 });
+persons[0].age = 31;
+
+console.log(persons, copiedPersons); */
+
+/* const nameData = ['Gleb', 'Terekhov', 'Mr', 30];
+const [ firstName, LastName, ...otherInformation ] = nameData 
+
+console.log(firstName, LastName, ...otherInformation); */
+
 
