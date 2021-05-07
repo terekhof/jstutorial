@@ -41,7 +41,6 @@ class Tooltip extends Component {
   constructor(closeNotifierFunction, text, hostElementId) {
     super();
     this.closeNotifier = closeNotifierFunction;
-    //this.hostElement = hostElementId;
     this.text = text;
     this.create();
   }
